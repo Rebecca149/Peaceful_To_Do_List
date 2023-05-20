@@ -1,6 +1,8 @@
 import InputAndButton from "./components/inputs";
-import TheList from './components/ListItems/index.js'
-import {useState} from 'react'
+import TheList from './components/ListItems/index.js';
+import {useState} from 'react';
+import React from 'react';
+import './App.css';
 
 
 
@@ -20,7 +22,6 @@ function App() {
   // The function that changes the value of 'userInput' every time they type in the input field
   function changeUserInputValue(userInput){
     setUserInput(userInput)
-
   }
 
   function deleteAnItem(index) {
@@ -32,7 +33,14 @@ function App() {
 
   return (
     <div>
-      <h1>To Do List</h1>
+    <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"/>
+    </head>
+    <div className='page'>
+    <div className='listCard'>
+      <h1 className='listTitle'>To Do List</h1>
       <InputAndButton 
       handleChange={changeUserInputValue} 
       handleClick= {addItemToList}
@@ -41,6 +49,8 @@ function App() {
       list={list} 
       userInput={userInput}
       handleClick={deleteAnItem}/>
+    </div>
+    </div>
     </div>
   )
 }
