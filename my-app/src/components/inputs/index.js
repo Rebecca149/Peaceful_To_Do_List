@@ -10,4 +10,4 @@ function InputAndButton({userInput, handleClick, handleChange}) {
     )
 }
 
-export default InputAndButton;
+export default InputAndButton; 

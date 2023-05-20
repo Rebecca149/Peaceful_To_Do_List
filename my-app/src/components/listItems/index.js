@@ -1,11 +1,13 @@
+import React from 'react'
 
-
-function TheList({}) {
+function TheList({list, handleClick}) {
     return (
         <ul>
-            <li></li>
+            {list.map((userInput, index) => (<li key={index}>{userInput}
+            <button key= {index} onClick={()=>handleClick(index)}>Delete</button>
+            </li>))}
         </ul>
     )
-}
+};
 
 export default TheList
